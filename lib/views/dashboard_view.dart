@@ -13,6 +13,6 @@ class DashboardView extends StatelessWidget {
         tabletLayout: (context) => const SizedBox(),
         desktopLayout: (context) => const DashboardDesktopLayout(),
       ),
-    ); /**/
+    );
   }
 }
