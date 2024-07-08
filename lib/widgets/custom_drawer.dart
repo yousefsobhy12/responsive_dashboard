@@ -27,15 +27,17 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(),
+                  child: SizedBox(
+                    height: 20,
+                  ),
                 ),
                 InActiveListTile(
                   drawerItemModel: DrawerItemModel(
-                      icon: Assets.imagesSettings, title: 'Settings'),
+                      icon: Assets.imagesSettings, title: 'Settings system'),
                 ),
                 InActiveListTile(
                   drawerItemModel: DrawerItemModel(
-                      icon: Assets.imagesLogout, title: 'Logout'),
+                      icon: Assets.imagesLogout, title: 'Logout account'),
                 ),
                 SizedBox(
                   height: 8,
