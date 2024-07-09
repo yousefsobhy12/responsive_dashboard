@@ -31,7 +31,7 @@ class _AllExpensesListState extends State<AllExpensesList> {
       balance: r'$20,129',
     ),
   ];
-
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -40,16 +40,40 @@ class _AllExpensesListState extends State<AllExpensesList> {
         var item = e.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(allExpensesItemModel: item, isSelected: false,),
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensesItem(
+                  allExpensesItemModel: item,
+                  isSelected: selectedIndex == index,
+                ),
+              ),
             ),
           );
         } else {
           // You should provide a default return value for all cases
-          return Expanded(child: AllExpensesItem(allExpensesItemModel: item, isSelected: false,));
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: AllExpensesItem(
+                allExpensesItemModel: item,
+                isSelected: selectedIndex == index,
+              ),
+            ),
+          );
         }
       }).toList(),
     );
+  }
+
+  void updateIndex(index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
