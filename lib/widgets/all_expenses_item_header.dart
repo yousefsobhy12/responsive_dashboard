@@ -6,16 +6,30 @@ class AllExpensesItemHeader extends StatelessWidget {
   const AllExpensesItemHeader({
     super.key,
     required this.allExpensesItemModel,
+    this.imageBackground,
+    this.imageColor,
   });
 
   final AllExpensesItemModel allExpensesItemModel;
-
+  final Color? imageBackground, imageColor;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Center(
-          child: SvgPicture.asset(allExpensesItemModel.image),
+        Container(
+          width: 60,
+          height: 60,
+          decoration: ShapeDecoration(
+            color: imageBackground ?? const Color(0xFFFAFAFA),
+            shape: const OvalBorder(),
+          ),
+          child: Center(
+            child: SvgPicture.asset(
+              allExpensesItemModel.image,
+              colorFilter: ColorFilter.mode(
+                  imageColor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
+            ),
+          ),
         ),
         const Spacer(),
         Transform.rotate(

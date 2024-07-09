@@ -16,7 +16,6 @@ class AllExpenses extends StatelessWidget {
         ),
       ),
       child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AllExpensesHeader(),
           SizedBox(

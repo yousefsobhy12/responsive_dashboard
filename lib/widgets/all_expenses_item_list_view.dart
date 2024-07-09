@@ -42,12 +42,12 @@ class _AllExpensesListState extends State<AllExpensesList> {
           return Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(allExpensesItemModel: item),
+              child: AllExpensesItem(allExpensesItemModel: item, isSelected: false,),
             ),
           );
         } else {
           // You should provide a default return value for all cases
-          return Expanded(child: AllExpensesItem(allExpensesItemModel: item));
+          return Expanded(child: AllExpensesItem(allExpensesItemModel: item, isSelected: false,));
         }
       }).toList(),
     );
