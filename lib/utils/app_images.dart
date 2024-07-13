@@ -1,5 +1,9 @@
 class Assets {
   Assets._();
+  
+  /// Assets for fontsMontserratRegular
+  /// assets/fonts/Montserrat-Regular.ttf
+  static const String fontsMontserratRegular = "assets/fonts/Montserrat-Regular.ttf";
 
   /// Assets for imagesAvatar1
   /// assets/images/avatar_1.svg
@@ -9,17 +13,21 @@ class Assets {
   /// assets/images/avatar_2.svg
   static const String imagesAvatar2 = "assets/images/avatar_2.svg";
 
-  
+  /// Assets for imagesAvatar3
+  /// assets/images/avatar_3.svg
   static const String imagesAvatar3 = "assets/images/avatar_3.svg";
 
-  /// Assets for imagesBalanca
-  /// assets/images/balanca.svg
+  /// Assets for imagesBalance
+  /// assets/images/balance.svg
   static const String imagesBalance = "assets/images/balance.svg";
 
   /// Assets for imagesCardBackground
   /// assets/images/card_background.svg
-  static const String imagesCardBackground =
-      "assets/images/card_background.svg";
+  static const String imagesCardBackground = "assets/images/card_background.svg";
+
+  /// Assets for imagesCardBackground
+  /// assets/images/card_background.png
+  static const String imagesCardBackground = "assets/images/card_background.png";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
@@ -28,6 +36,10 @@ class Assets {
   /// Assets for imagesExpenses
   /// assets/images/expenses.svg
   static const String imagesExpenses = "assets/images/expenses.svg";
+
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
 
   /// Assets for imagesIncome
   /// assets/images/income.svg
@@ -43,8 +55,7 @@ class Assets {
 
   /// Assets for imagesMyTransactions
   /// assets/images/my_transactions.svg
-  static const String imagesMyTransactions =
-      "assets/images/my_transactions.svg";
+  static const String imagesMyTransactions = "assets/images/my_transactions.svg";
 
   /// Assets for imagesSettings
   /// assets/images/settings.svg
@@ -58,3 +69,4 @@ class Assets {
   /// assets/images/wallet_acc.svg
   static const String imagesWalletAcc = "assets/images/wallet_acc.svg";
 }
+
