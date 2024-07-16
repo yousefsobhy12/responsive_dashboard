@@ -13,8 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-            image: AssetImage(Assets.imagesCardBackground),
-          ),
+              image: AssetImage(Assets.imagesCardBackground), fit: BoxFit.fill),
           color: const Color(0xff4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -25,7 +24,7 @@ class MyCard extends StatelessWidget {
           children: [
             ListTile(
               contentPadding:
-                  const EdgeInsets.only(left: 31, top: 20, right: 45),
+                  const EdgeInsets.only(left: 31, top: 16, right: 42),
               title: Text(
                 'Name card',
                 style: AppStyles.styleRegular16.copyWith(
@@ -58,7 +57,7 @@ class MyCard extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
