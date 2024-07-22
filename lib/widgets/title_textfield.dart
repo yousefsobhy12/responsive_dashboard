@@ -14,7 +14,7 @@ class TitleTextField extends StatelessWidget {
           padding: const EdgeInsets.only(left: 8),
           child: Text(
             title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
         ),
         CustomTextField(hint: hint),

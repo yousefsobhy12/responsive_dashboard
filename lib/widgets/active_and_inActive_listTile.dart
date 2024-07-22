@@ -17,7 +17,7 @@ class ActiveListTile extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.icon),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleBold16,
+        style: AppStyles.styleBold16(context),
       ),
       trailing: Container(
         width: 3.27,
@@ -41,7 +41,7 @@ class InActiveListTile extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.icon),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
     );
   }

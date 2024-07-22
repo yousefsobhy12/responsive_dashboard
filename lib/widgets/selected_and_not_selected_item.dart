@@ -37,7 +37,8 @@ class SelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.title,
-              style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
             ),
           ),
           const SizedBox(
@@ -47,7 +48,7 @@ class SelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.date,
-              style: AppStyles.styleRegular14
+              style: AppStyles.styleRegular14(context)
                   .copyWith(color: const Color(0xFFFAFAFA)),
             ),
           ),
@@ -58,7 +59,8 @@ class SelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.balance,
-              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
             ),
           ),
         ],
@@ -97,7 +99,7 @@ class NotSelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.title,
-              style: AppStyles.styleSemiBold16,
+              style: AppStyles.styleSemiBold16(context),
             ),
           ),
           const SizedBox(
@@ -107,7 +109,7 @@ class NotSelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.date,
-              style: AppStyles.styleRegular14,
+              style: AppStyles.styleRegular14(context),
             ),
           ),
           const SizedBox(
@@ -117,7 +119,7 @@ class NotSelectedItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               allExpensesItemModel.balance,
-              style: AppStyles.styleSemiBold24,
+              style: AppStyles.styleSemiBold24(context),
             ),
           ),
         ],
