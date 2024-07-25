@@ -35,40 +35,83 @@ class _AllExpensesListState extends State<AllExpensesList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensesItem(
-                  allExpensesItemModel: item,
-                  isSelected: selectedIndex == index,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
-          );
-        } else {
-          // You should provide a default return value for all cases
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: AllExpensesItem(
-                allExpensesItemModel: item,
-                isSelected: selectedIndex == index,
-              ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[1],
+              isSelected: selectedIndex == 1,
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
+    // Row(
+    //   children: items.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     var item = e.value;
+    //     if (index == 1) {
+    //       return Expanded(
+    //         child: GestureDetector(
+    //           onTap: () {
+    //             updateIndex(index);
+    //           },
+    //           child: Padding(
+    //             padding: const EdgeInsets.symmetric(horizontal: 12),
+    //             child: AllExpensesItem(
+    //               allExpensesItemModel: item,
+    //               isSelected: selectedIndex == index,
+    //             ),
+    //           ),
+    //         ),
+    //       );
+    //     } else {
+    //       // You should provide a default return value for all cases
+    //       return Expanded(
+    //         child: GestureDetector(
+    //           onTap: () {
+    //             updateIndex(index);
+    //           },
+    //           child: AllExpensesItem(
+    //             allExpensesItemModel: item,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       );
+    //     }
+    //   }).toList(),
+    // );
   }
 
   void updateIndex(index) {
